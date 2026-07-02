@@ -21,14 +21,31 @@ body {
 
 /* Hero Section */
 .hero {
+  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   text-align: center;
   padding: 2rem;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('./assets/sunset_background.png');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(70%);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-content h1 {
@@ -53,7 +70,7 @@ body {
 
 .cta-button {
   display: inline-block;
-  padding: 0.8rem 2rem;
+  padding: 0.7rem 1.4rem;
   background: white;
   color: #667eea;
   text-decoration: none;
@@ -183,5 +200,14 @@ body {
 
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .cta-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-actions {
+    gap: 0.6rem;
   }
 }

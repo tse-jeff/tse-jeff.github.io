@@ -52,14 +52,14 @@ function App() {
           <h1>Jeffery Tse</h1>
           <p>Developer | Foodie | Tech Enthusiast</p>
           <div className="hero-actions">
-            <a href="#portfolio" className="cta-button">View My Work</a>
+            <a href="#portfolio" className="cta-button">My Work</a>
             <a
               href={`${process.env.PUBLIC_URL}/Jeffery-Tse-Resume.pdf`}
               className="cta-button"
               target="_blank"
               rel="noreferrer"
             >
-              View Resume
+              Resume
             </a>
             <a href="#about" className="cta-button">About</a>
             <a href="#contact" className="cta-button">Contact</a>
