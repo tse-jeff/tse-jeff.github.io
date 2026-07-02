@@ -2,6 +2,7 @@ import './App.css';
 import FeaturedProject from './components/FeaturedProject';
 import ProjectListItem from './components/ProjectListItem';
 import AboutMe from './components/AboutMe';
+import grogetterScreenshot from './assets/grogetter_ss.png';
 import websiteScreenshot from './assets/website_ss.png';
 import platformerScreenshot from './assets/last_scroll_ss.png';
 import selfDriveScreenshot from './assets/self_drive_ss.png';
@@ -15,7 +16,7 @@ function App() {
       title: 'GroGetter',
       description: 'Led a team of 4 building a grocery tracking web app with Flask, Python, MongoDB, and React, deployed on Heroku with pytest-driven CI.',
       technologies: ['Flask', 'Python', 'MongoDB', 'React', 'Heroku', 'pytest'],
-      imageUrl: 'https://via.placeholder.com/400x300?text=GroGetter',
+      imageUrl: grogetterScreenshot,
       featured: true,
       links: [
         { label: 'Backend', url: 'https://github.com/zhangdzh/SWE-F22' },
