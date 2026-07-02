@@ -51,15 +51,19 @@ function App() {
         <div className="hero-content">
           <h1>Jeffery Tse</h1>
           <p>Developer | Foodie | Tech Enthusiast</p>
-          <a href="#portfolio" className="cta-button">View My Work</a>
-          <a
-            href={`${process.env.PUBLIC_URL}/Jeffery-Tse-Resume.pdf`}
-            className="cta-button"
-            target="_blank"
-            rel="noreferrer"
-          >
-            View Resume
-          </a>
+          <div className="hero-actions">
+            <a href="#portfolio" className="cta-button">View My Work</a>
+            <a
+              href={`${process.env.PUBLIC_URL}/Jeffery-Tse-Resume.pdf`}
+              className="cta-button"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View Resume
+            </a>
+            <a href="#about" className="cta-button">About</a>
+            <a href="#contact" className="cta-button">Contact</a>
+          </div>
         </div>
       </header>
 
@@ -79,7 +83,7 @@ function App() {
       <AboutMe />
 
       {/* Contact Section */}
-      <section className="contact">
+      <section id="contact" className="contact">
         <div className="container">
           <h2>Get In Touch</h2>
           <p>Feel free to reach out for opportunities or collaborations</p>

@@ -43,6 +43,14 @@ body {
   animation: fadeInUp 1s ease-out 0.2s backwards;
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
 .cta-button {
   display: inline-block;
   padding: 0.8rem 2rem;
@@ -58,10 +66,6 @@ body {
 .cta-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.cta-button + .cta-button {
-  margin-left: 1rem;
 }
 
 /* Container */
