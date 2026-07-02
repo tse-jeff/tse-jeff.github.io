@@ -6,7 +6,17 @@ function PortfolioProject({ project }) {
       <div className="project-image">
         <img src={project.imageUrl} alt={project.title} />
         <div className="project-overlay">
-          <a href={project.link} className="project-link">View Project</a>
+          {project.links.map((link) => (
+            <a
+              key={link.url}
+              href={link.url}
+              target="_blank"
+              rel="noreferrer"
+              className="project-link"
+            >
+              {link.label}
+            </a>
+          ))}
         </div>
       </div>
       <div className="project-content">
