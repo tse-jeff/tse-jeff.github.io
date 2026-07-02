@@ -11,8 +11,8 @@ html {
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  color: #333;
-  background: #f9f9f9;
+  color: #e4e4e7;
+  background: #121218;
 }
 
 .app {
@@ -95,7 +95,7 @@ body {
 /* Portfolio Section */
 .portfolio {
   padding: 5rem 2rem;
-  background: white;
+  background: #121218;
 }
 
 .portfolio h2,
@@ -117,14 +117,14 @@ body {
 /* Contact Section */
 .contact {
   padding: 5rem 2rem;
-  background: white;
+  background: #121218;
   text-align: center;
 }
 
 .contact p {
   font-size: 1.1rem;
   margin-bottom: 2rem;
-  color: #666;
+  color: #a8adba;
 }
 
 .contact-links {
@@ -152,7 +152,7 @@ body {
 
 /* Footer */
 .footer {
-  background: #333;
+  background: #0a0a0f;
   color: white;
   text-align: center;
   padding: 2rem;

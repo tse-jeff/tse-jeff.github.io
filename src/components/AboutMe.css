@@ -19,20 +19,21 @@
 .about-intro {
   margin-bottom: 3rem;
   padding: 2rem;
-  background: white;
+  background: #1c1c26;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .about-greeting {
   font-size: 1.8rem;
-  color: #667eea;
+  color: #8b9cf5;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
 .about-intro p {
-  color: #555;
+  color: #b0b3bd;
   line-height: 1.8;
   font-size: 1.05rem;
 }
@@ -40,20 +41,21 @@
 .about-section {
   margin-bottom: 2rem;
   padding: 2rem;
-  background: white;
+  background: #1c1c26;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   border-left: 5px solid #667eea;
 }
 
 .about-section h3 {
-  color: #667eea;
+  color: #8b9cf5;
   font-size: 1.6rem;
   margin-bottom: 1rem;
 }
 
 .about-section p {
-  color: #555;
+  color: #b0b3bd;
   line-height: 1.8;
   margin-bottom: 1rem;
   font-size: 1.05rem;
@@ -68,7 +70,7 @@
 .about-list li {
   padding: 0.8rem 0 0.8rem 1.5rem;
   position: relative;
-  color: #555;
+  color: #b0b3bd;
   line-height: 1.7;
   font-size: 1rem;
 }
