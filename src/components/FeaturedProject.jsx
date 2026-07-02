@@ -7,7 +7,6 @@ function FeaturedProject({ project }) {
         <img src={project.imageUrl} alt={project.title} />
       </div>
       <div className="featured-project-content">
-        <span className="featured-label">Featured Project</span>
         <h3>{project.title}</h3>
         <p className="featured-project-description">{project.description}</p>
         <div className="technologies">

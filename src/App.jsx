@@ -5,6 +5,8 @@ import AboutMe from './components/AboutMe';
 import websiteScreenshot from './assets/website_ss.png';
 import platformerScreenshot from './assets/last_scroll_ss.png';
 import selfDriveScreenshot from './assets/self_drive_ss.png';
+import githubLogo from './assets/github_logo.png';
+import linkedinLogo from './assets/linkedin_logo.png';
 
 function App() {
   const projects = [
@@ -94,22 +96,29 @@ function App() {
           <h2>Get In Touch</h2>
           <p>Feel free to reach out for opportunities or collaborations</p>
           <div className="contact-links">
-            <a href="mailto:jeff.tse@nyu.edu" className="link-button">Email</a>
+            <a href="mailto:jeff.tse@nyu.edu" className="icon-button" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m2 7 10 6 10-6" />
+              </svg>
+            </a>
             <a
               href="https://www.linkedin.com/in/jeffery-tse/"
-              className="link-button"
+              className="icon-button"
               target="_blank"
               rel="noreferrer"
+              aria-label="LinkedIn"
             >
-              LinkedIn
+              <img src={linkedinLogo} alt="LinkedIn" />
             </a>
             <a
               href="https://github.com/tse-jeff/"
-              className="link-button"
+              className="icon-button"
               target="_blank"
               rel="noreferrer"
+              aria-label="GitHub"
             >
-              GitHub
+              <img src={githubLogo} alt="GitHub" />
             </a>
           </div>
         </div>

@@ -26,7 +26,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #e4e4e7;
   text-align: center;
   padding: 2rem;
   overflow: hidden;
@@ -49,12 +49,14 @@ body {
 }
 
 .hero-content h1 {
+  color: #2e3348;
   font-size: 4rem;
   margin-bottom: 1rem;
   animation: fadeInUp 1s ease-out;
 }
 
 .hero-content p {
+  color: #b0b6c8;
   font-size: 1.5rem;
   margin-bottom: 2rem;
   animation: fadeInUp 1s ease-out 0.2s backwards;
@@ -71,8 +73,9 @@ body {
 .cta-button {
   display: inline-block;
   padding: 0.7rem 1.4rem;
-  background: #667eea;
-  color: white;
+  background: #34456b;
+  color: #b0b6c8;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   text-decoration: none;
   border-radius: 50px;
   font-weight: bold;
@@ -81,7 +84,8 @@ body {
 }
 
 .cta-button:hover {
-  background: #764ba2;
+  background: #b0b6c8;
+  color: #2e3348;
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -128,17 +132,28 @@ body {
   flex-wrap: wrap;
 }
 
-.link-button {
-  padding: 0.7rem 1.5rem;
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
   background: #667eea;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
+  border-radius: 50%;
   transition: all 0.3s ease;
-  font-weight: 500;
 }
 
-.link-button:hover {
+.icon-button img,
+.icon-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-button svg {
+  color: white;
+}
+
+.icon-button:hover {
   background: #764ba2;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
