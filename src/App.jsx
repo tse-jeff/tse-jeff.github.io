@@ -1,5 +1,6 @@
 import './App.css';
-import PortfolioProject from './components/PortfolioProject';
+import FeaturedProject from './components/FeaturedProject';
+import ProjectListItem from './components/ProjectListItem';
 import AboutMe from './components/AboutMe';
 import websiteScreenshot from './assets/website_ss.png';
 import platformerScreenshot from './assets/last_scroll_ss.png';
@@ -13,6 +14,7 @@ function App() {
       description: 'Led a team of 4 building a grocery tracking web app with Flask, Python, MongoDB, and React, deployed on Heroku with pytest-driven CI.',
       technologies: ['Flask', 'Python', 'MongoDB', 'React', 'Heroku', 'pytest'],
       imageUrl: 'https://via.placeholder.com/400x300?text=GroGetter',
+      featured: true,
       links: [
         { label: 'Backend', url: 'https://github.com/zhangdzh/SWE-F22' },
         { label: 'Frontend', url: 'https://github.com/zhangdzh/GroGetterFrontend' },
@@ -44,6 +46,9 @@ function App() {
     },
   ];
 
+  const featuredProject = projects.find((project) => project.featured);
+  const secondaryProjects = projects.filter((project) => !project.featured);
+
   return (
     <div className="app">
       {/* Hero Section */}
@@ -71,9 +76,10 @@ function App() {
       <section id="portfolio" className="portfolio">
         <div className="container">
           <h2>My Work</h2>
-          <div className="projects-grid">
-            {projects.map((project) => (
-              <PortfolioProject key={project.id} project={project} />
+          <FeaturedProject project={featuredProject} />
+          <div className="project-list">
+            {secondaryProjects.map((project) => (
+              <ProjectListItem key={project.id} project={project} />
             ))}
           </div>
         </div>

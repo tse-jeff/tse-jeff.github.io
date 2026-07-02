@@ -17,12 +17,29 @@
 }
 
 .about-intro {
-  margin-bottom: 3rem;
-  padding: 2rem;
-  background: #1c1c26;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.about-portrait {
+  flex: 0 0 260px;
+}
+
+.about-portrait img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  display: block;
+}
+
+.about-intro-text {
+  flex: 1;
+  min-width: 0;
 }
 
 .about-greeting {
@@ -32,14 +49,19 @@
   margin-bottom: 1rem;
 }
 
-.about-intro p {
+.about-intro-text p {
   color: #b0b3bd;
   line-height: 1.8;
   font-size: 1.05rem;
 }
 
+.about-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
 .about-section {
-  margin-bottom: 2rem;
   padding: 2rem;
   background: #1c1c26;
   border-radius: 10px;
@@ -88,7 +110,22 @@
     font-size: 2rem;
   }
 
-  .about-intro,
+  .about-intro {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .about-portrait {
+    flex: 0 0 auto;
+    width: 180px;
+    margin: 0 auto;
+  }
+
+  .about-cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
   .about-section {
     padding: 1.5rem;
   }
