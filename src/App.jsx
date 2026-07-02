@@ -8,6 +8,7 @@ import platformerScreenshot from './assets/last_scroll_ss.png';
 import selfDriveScreenshot from './assets/self_drive_ss.png';
 import githubLogo from './assets/github_logo.png';
 import linkedinLogo from './assets/linkedin_logo.png';
+import resume from './assets/Jeffery-Tse-Resume.pdf';
 
 function App() {
   const projects = [
@@ -62,7 +63,7 @@ function App() {
           <div className="hero-actions">
             <a href="#portfolio" className="cta-button">My Work</a>
             <a
-              href={`${process.env.PUBLIC_URL}/Jeffery-Tse-Resume.pdf`}
+              href={resume}
               className="cta-button"
               target="_blank"
               rel="noreferrer"
