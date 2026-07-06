@@ -8,9 +8,14 @@ import platformerScreenshot from './assets/last_scroll_ss.png';
 import selfDriveScreenshot from './assets/self_drive_ss.png';
 import githubLogo from './assets/github_logo.png';
 import linkedinLogo from './assets/linkedin_logo.png';
-import resume from './assets/Jeffery-Tse-Resume.pdf';
+import { CMS_BASE_URL } from './cms';
+import { useContentSlot } from './hooks/useContentSlot';
+
+const RESUME_URL = `${CMS_BASE_URL}/files/resume`;
 
 function App() {
+  const tagline = useContentSlot('tagline', 'Developer | Foodie | Tech Enthusiast');
+
   const projects = [
     {
       id: 1,
@@ -59,11 +64,11 @@ function App() {
       <header className="hero">
         <div className="hero-content">
           <h1>Jeffery Tse</h1>
-          <p>Developer | Foodie | Tech Enthusiast</p>
+          <p>{tagline}</p>
           <div className="hero-actions">
             <a href="#portfolio" className="cta-button">My Work</a>
             <a
-              href={resume}
+              href={RESUME_URL}
               className="cta-button"
               target="_blank"
               rel="noreferrer"

@@ -4,6 +4,10 @@ My personal site, deployed at [tse-jeff.github.io](https://tse-jeff.github.io/).
 
 It's a single-page site: a hero, a portfolio section pulling from a small list of real projects, an about section, and a way to get in touch.
 
+## Content
+
+The hero tagline, About Me text, and resume link are fetched at runtime from [custom-cms](https://github.com/tse-jeff/custom-cms), a small Cloudflare Worker + R2-backed admin tool. That means updating this content is a drag-and-drop upload instead of a commit + rebuild of this site — the hardcoded fallback text baked into the build only shows if that service is ever unreachable.
+
 ## Development
 
 - `npm start` — run the dev server at `localhost:3000`.

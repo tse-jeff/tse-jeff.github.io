@@ -1,7 +1,27 @@
 import './AboutMe.css';
 import portrait from '../assets/pfp.jpg';
+import { useContentSlot } from '../hooks/useContentSlot';
+import { renderMarkdown } from '../utils/renderMarkdown';
+
+const FALLBACK_INTRO =
+  "I'm a developer who loves exploring new things. I specialize in automated testing, developer infrastructure, and AI-driven workflows, and I thrive on fast-paced teams where data routing, automation, and great user experiences intersect.";
+
+const FALLBACK_NOW = `- **At Morgan Stanley:** Architecting Python-based AI workflow orchestrators (agentic tools/MCP) and spearheading global internal frameworks to scale engineering velocity.
+- **Past:** Amazon SDE Intern (Alexa Music) & NYU Computer Science alum.
+- **Side Quests:** Deploying home servers and learning about LLMs to find local solutions.`;
+
+const FALLBACK_BEYOND = `When I'm not architecting workflows, you can usually find me:
+
+- **On the Court:** Playing volleyball with friends—it's the best way to stay sharp and social.
+- **Creating:** I still enjoy capturing life's best moments through video, a hobby that keeps my creative side active.
+
+Always down to connect with fellow builders!`;
 
 function AboutMe() {
+  const intro = useContentSlot('about-intro', FALLBACK_INTRO);
+  const now = useContentSlot('about-now', FALLBACK_NOW);
+  const beyond = useContentSlot('about-beyond', FALLBACK_BEYOND);
+
   return (
     <section id="about" className="about">
       <div className="container">
@@ -13,30 +33,19 @@ function AboutMe() {
             </div>
             <div className="about-intro-text">
               <p className="about-greeting">Hello! I'm Jeffery Tse.</p>
-              <p>
-                I'm a developer who loves exploring new things. I specialize in automated testing, developer infrastructure, and AI-driven workflows, and I thrive on fast-paced teams where data routing, automation, and great user experiences intersect.
-              </p>
+              <p>{intro}</p>
             </div>
           </div>
 
           <div className="about-cards">
             <div className="about-section">
               <h3>What I'm Doing Now</h3>
-              <ul className="about-list">
-                <li><strong>At Morgan Stanley:</strong> Architecting Python-based AI workflow orchestrators (agentic tools/MCP) and spearheading global internal frameworks to scale engineering velocity.</li>
-                <li><strong>Past:</strong> Amazon SDE Intern (Alexa Music) & NYU Computer Science alum.</li>
-                <li><strong>Side Quests:</strong> Deploying home servers and learning about LLMs to find local solutions.</li>
-              </ul>
+              <div dangerouslySetInnerHTML={{ __html: renderMarkdown(now) }} />
             </div>
 
             <div className="about-section">
               <h3>Beyond the Code</h3>
-              <p>When I'm not architecting workflows, you can usually find me:</p>
-              <ul className="about-list">
-                <li><strong>On the Court:</strong> Playing volleyball with friends—it's the best way to stay sharp and social.</li>
-                <li><strong>Creating:</strong> I still enjoy capturing life's best moments through video, a hobby that keeps my creative side active.</li>
-              </ul>
-              <p>Always down to connect with fellow builders!</p>
+              <div dangerouslySetInnerHTML={{ __html: renderMarkdown(beyond) }} />
             </div>
           </div>
         </div>
